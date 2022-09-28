@@ -6,32 +6,37 @@ For this exercise, I was able to create working tests for login, editing the use
 I also wanted to show an example of fixture use, but I could have also entered the data in either the page object or the test file as consts.  This would make both files look a bit cluttered though.
 
 Use 
-'''
+```
 npm run open
-'''
+```
 To get started with cypress.  I do have a headless run avaialble via npm run headless
 
 Oh, and the username and password I put in a cypress.env.json.  All you need to do to set up the file is:
 
-'''
+```
 {
     "username": "devtest+automation@lovevery.com",
     "password": "test@1234"
 }
-'''
+```
 
 ### Why I choose to create the test as shown
 So I chose to make this page object style because this is essentially e2e prod tests.  If I was working in the dev repo, there would be a number of changes made:
 - API usage and App Actions to ensure test stability (login without the UI, minimizing and disabling iframes and the chat, injecting data-attributes)
 - More tests related to smaller resolutions (mock mobile tests as I like to call them)
 
-## Difficulties
+### Difficulties
 - Getting the test to pass due to the unexpected error (see below) was a doozy.  I try not to ignore errors in tests, but without doing so, all the tests fail.
 - The iframes (chat, the activities modal).  I was tempted to use cypress-iframe to make sure they stop obscuring buttons, but for time contrainst reasons I chose to use focus() instead.  This costs the stability of the tests, especially when running headless. 
 - Lack of element selection clarity. I used a mix of IDs and Classes to select elements, with mixed results.  Mostly because the "css-*" names reminded me of dynamic elements, which make for very brittle tests without data-attributes or other ways to tag them.
 - Due to the unique ID in the links, I chose to avoid using visit in my page object files (besides login)
 
+
+
+
 ## Defects
+
+Though there are definitely brittleness that can be blamed on the code, there are issues I saw while working on this.
 
 ### Out of Memory during tests
 During the tests, the browser would stop due to running out of memory, forcing me to reset cypress.  
