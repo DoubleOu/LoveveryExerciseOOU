@@ -4,7 +4,7 @@
   "description": "Automation Exercise for Lovevery",
   "main": "index.js",
   "scripts": {
-    "prettier-format": "prettier --config .prettierrc 'src/**/*.ts' --write",
+    "lint-fix": "eslint 'cypress/**/*.ts' --fix",
     "open": "cypress open",
     "headless": "cypress run"
   },
@@ -29,6 +29,7 @@
     "cypress": "^10.9.0",
     "eslint": "^8.24.0",
     "eslint-plugin-cypress": "^2.12.1",
+    "eslint-plugin-prettier": "^4.2.1",
     "prettier": "^2.7.1",
     "typescript": "^4.8.3"
   }

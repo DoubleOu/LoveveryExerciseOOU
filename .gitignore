@@ -3,6 +3,5 @@ node_modules/
 downloads/
 
 #Cypress related items (for security reasons)
-cypress.env.json
 /cypress/videos/
 /cypress/screenshots/
