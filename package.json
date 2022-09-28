@@ -1,0 +1,35 @@
+{
+  "name": "loveveryexerciseoou",
+  "version": "1.0.0",
+  "description": "Automation Exercise for Lovevery",
+  "main": "index.js",
+  "scripts": {
+    "prettier-format": "prettier --config .prettierrc 'src/**/*.ts' --write",
+    "open": "cypress open",
+    "headless": "cypress run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DoubleOu/LoveveryExerciseOOU.git"
+  },
+  "keywords": [
+    "automation",
+    "typescript"
+  ],
+  "author": "Okwudili Udeh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DoubleOu/LoveveryExerciseOOU/issues"
+  },
+  "homepage": "https://github.com/DoubleOu/LoveveryExerciseOOU#readme",
+  "devDependencies": {
+    "@types/node": "^18.7.20",
+    "@typescript-eslint/eslint-plugin": "^5.38.0",
+    "@typescript-eslint/parser": "^5.38.0",
+    "cypress": "^10.9.0",
+    "eslint": "^8.24.0",
+    "eslint-plugin-cypress": "^2.12.1",
+    "prettier": "^2.7.1",
+    "typescript": "^4.8.3"
+  }
+}
